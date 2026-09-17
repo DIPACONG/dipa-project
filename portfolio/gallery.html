@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Galeri — I Made Arya Dipa</title>
+<meta name="description" content="Kumpulan hasil foto: potret, lanskap, jalanan, dan arsitektur." />
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#000000', paper: '#ffffff', line: '#e2e2e2', mute: '#6b6b6b' },
+        fontFamily: {
+          serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="font-serif text-lg tracking-tight">I Made Arya Dipa</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a data-nav-link href="index.html" class="link-reveal opacity-60">Beranda</a>
+      <a data-nav-link href="gallery.html" class="link-reveal opacity-100">Galeri</a>
+      <a data-nav-link href="projects.html" class="link-reveal opacity-60">Proyek</a>
+      <a data-nav-link href="about.html" class="link-reveal opacity-60">Tentang</a>
+    </nav>
+    <button id="nav-toggle" aria-expanded="false" aria-label="Buka menu navigasi" class="md:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-[6px]">
+      <span class="hamburger-line hamburger-line-1 block w-6 h-px bg-ink"></span>
+      <span class="hamburger-line hamburger-line-2 block w-6 h-px bg-ink"></span>
+      <span class="hamburger-line hamburger-line-3 block w-6 h-px bg-ink"></span>
+    </button>
+  </div>
+</header>
+
+<div id="nav-overlay" class="md:hidden fixed inset-0 z-30 bg-black text-white flex flex-col justify-center px-8">
+  <nav class="flex flex-col gap-6 font-serif text-4xl">
+    <a href="index.html">Beranda</a>
+    <a href="gallery.html">Galeri</a>
+    <a href="projects.html">Proyek</a>
+    <a href="about.html">Tentang</a>
+  </nav>
+</div>
+
+<main class="pt-16">
+
+  <section class="max-w-6xl mx-auto px-6 sm:px-8 pt-16 pb-10">
+    <h1 class="font-serif text-4xl sm:text-5xl tracking-tight max-w-2xl">Galeri</h1>
+    <p class="mt-4 max-w-lg text-mute leading-relaxed">
+      Dua puluh lima bidikan yang saya pilih sendiri dari beberapa tahun terakhir, dikelompokkan menurut jenis pemotretan.
+    </p>
+  </section>
+
+  <!-- FILTER TABS -->
+  <section class="max-w-6xl mx-auto px-6 sm:px-8 pb-8">
+    <div class="flex flex-wrap gap-2 border-y border-line py-4" role="group" aria-label="Filter kategori foto">
+      <button data-filter-btn data-filter="semua" aria-pressed="true" class="bg-black text-white text-sm px-4 py-1.5">Semua</button>
+      <button data-filter-btn data-filter="potret" aria-pressed="false" class="text-black text-sm px-4 py-1.5 border border-line">Potret</button>
+      <button data-filter-btn data-filter="jalanan" aria-pressed="false" class="text-black text-sm px-4 py-1.5 border border-line">Jalanan</button>
+      <button data-filter-btn data-filter="lanskap" aria-pressed="false" class="text-black text-sm px-4 py-1.5 border border-line">Lanskap</button>
+      <button data-filter-btn data-filter="budaya" aria-pressed="false" class="text-black text-sm px-4 py-1.5 border border-line">Budaya</button>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section class="max-w-6xl mx-auto px-6 sm:px-8 pb-24">
+    <div data-filter-grid class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+
+      <!-- Potret -->
+      <figure data-filter-item data-category="potret" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Busana Adat di Antara Ukiran Batu" data-meta="Potret · No. 01" data-full="images/IMG-20251029-WA0059.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0059.jpg" alt="Busana Adat di Antara Ukiran Batu" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="potret" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Balutan Hijau di Antara Pepohonan" data-meta="Potret · No. 02" data-full="images/IMG-20251029-WA0063.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0063.jpg" alt="Balutan Hijau di Antara Pepohonan" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="potret" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Gaun Putih di Tepi Karang" data-meta="Potret · No. 03" data-full="images/IMG-20251029-WA0070.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0070.jpg" alt="Gaun Putih di Tepi Karang" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="potret" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Siluet dalam Kabut Hijau" data-meta="Potret · No. 04" data-full="images/IMG-20251029-WA0081.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0081.jpg" alt="Siluet dalam Kabut Hijau" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="potret" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Menatap dalam Diam" data-meta="Potret · No. 05" data-full="images/IMG-20251029-WA0082.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0082.jpg" alt="Menatap dalam Diam" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+
+      <!-- Jalanan -->
+      <figure data-filter-item data-category="jalanan" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Payung Warna-warni Saat Hujan" data-meta="Jalanan · No. 06" data-full="images/2018_06_13_19_11_IMG_8860.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_13_19_11_IMG_8860.JPG" alt="Payung Warna-warni Saat Hujan" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="jalanan" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Jas Hujan Biru di Tengah Kota" data-meta="Jalanan · No. 07" data-full="images/2018_06_13_19_11_IMG_8861.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_13_19_11_IMG_8861.JPG" alt="Jas Hujan Biru di Tengah Kota" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="jalanan" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Membawa Beban di Kepala" data-meta="Jalanan · No. 08" data-full="images/2018_06_13_19_12_IMG_8862.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_13_19_12_IMG_8862.JPG" alt="Membawa Beban di Kepala" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="jalanan" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Berlindung dari Hujan" data-meta="Jalanan · No. 09" data-full="images/2018_06_13_19_32_IMG_8863.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_13_19_32_IMG_8863.JPG" alt="Berlindung dari Hujan" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="jalanan" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Melangkah di Jalan Basah" data-meta="Jalanan · No. 10" data-full="images/2018_06_13_19_36_IMG_8865.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_13_19_36_IMG_8865.JPG" alt="Melangkah di Jalan Basah" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="jalanan" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Lalu Lintas Sore Berkabut" data-meta="Jalanan · No. 11" data-full="images/2018_06_13_19_37_IMG_8866.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_13_19_37_IMG_8866.JPG" alt="Lalu Lintas Sore Berkabut" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="jalanan" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Truk Tua di Jalan Basah" data-meta="Jalanan · No. 12" data-full="images/2018_06_13_19_38_IMG_8867.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_13_19_38_IMG_8867.JPG" alt="Truk Tua di Jalan Basah" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="jalanan" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Motor Melintas Sore Hari" data-meta="Jalanan · No. 13" data-full="images/2018_06_13_19_37_IMG_8868.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_13_19_37_IMG_8868.JPG" alt="Motor Melintas Sore Hari" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+
+      <!-- Lanskap -->
+      <figure data-filter-item data-category="lanskap" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Perbukitan dan Pemukiman" data-meta="Lanskap · No. 14" data-full="images/2018_06_28_18_49_IMG_9876.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_28_18_49_IMG_9876.JPG" alt="Perbukitan dan Pemukiman" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="lanskap" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Crane Oranye di Pelabuhan" data-meta="Lanskap · No. 15" data-full="images/2018_06_28_19_16_IMG_9875.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_28_19_16_IMG_9875.JPG" alt="Crane Oranye di Pelabuhan" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="lanskap" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Geladak Kapal, Laut Tosca" data-meta="Lanskap · No. 16" data-full="images/2018_06_28_19_17_IMG_9867.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_28_19_17_IMG_9867.JPG" alt="Geladak Kapal, Laut Tosca" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="lanskap" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Cerobong di Bawah Langit" data-meta="Lanskap · No. 17" data-full="images/2018_06_28_19_20_IMG_9874.JPG" href="#" class="block w-full h-full">
+          <img src="images/2018_06_28_19_20_IMG_9874.JPG" alt="Cerobong di Bawah Langit" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="lanskap" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Meja Kayu di Beranda" data-meta="Lanskap · No. 18" data-full="images/1000140230.jpg" href="#" class="block w-full h-full">
+          <img src="images/1000140230.jpg" alt="Meja Kayu di Beranda" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="lanskap" class="frame overflow-hidden bg-line aspect-[3/4]">
+        <a data-lightbox-trigger data-title="Gazebo Kayu di Tepi Air" data-meta="Lanskap · No. 19" data-full="images/1000140266.jpg" href="#" class="block w-full h-full">
+          <img src="images/1000140266.jpg" alt="Gazebo Kayu di Tepi Air" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+
+      <!-- Budaya -->
+      <figure data-filter-item data-category="budaya" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Busana Upacara Adat" data-meta="Budaya · No. 20" data-full="images/IMG-20251029-WA0048.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0048.jpg" alt="Busana Upacara Adat" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="budaya" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Mahkota dan Kain Songket" data-meta="Budaya · No. 21" data-full="images/IMG-20251029-WA0049.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0049.jpg" alt="Mahkota dan Kain Songket" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="budaya" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Berdiri di Depan Gapura Pura" data-meta="Budaya · No. 22" data-full="images/IMG-20251029-WA0051.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0051.jpg" alt="Berdiri di Depan Gapura Pura" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="budaya" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Anak-anak dalam Busana Pura" data-meta="Budaya · No. 23" data-full="images/IMG-20251029-WA0060.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0060.jpg" alt="Anak-anak dalam Busana Pura" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="budaya" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Berkumpul di Halaman Pura" data-meta="Budaya · No. 24" data-full="images/IMG-20251029-WA0061.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0061.jpg" alt="Berkumpul di Halaman Pura" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+      <figure data-filter-item data-category="budaya" class="frame overflow-hidden bg-line aspect-square">
+        <a data-lightbox-trigger data-title="Gerak Tari dalam Busana Adat" data-meta="Budaya · No. 25" data-full="images/IMG-20251029-WA0062.jpg" href="#" class="block w-full h-full">
+          <img src="images/IMG-20251029-WA0062.jpg" alt="Gerak Tari dalam Busana Adat" class="w-full h-full object-cover" loading="lazy" />
+        </a>
+      </figure>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 py-10 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-sm text-mute">
+    <p>© 2026 I Made Arya Dipa. Dibuat dengan Tailwind CSS.</p>
+    <div class="flex gap-6">
+      <a href="mailto:halo@imadearyadipa.dev" class="link-reveal text-ink">Email</a>
+      <a href="https://github.com/" class="link-reveal text-ink">GitHub</a>
+      <a href="https://instagram.com/" class="link-reveal text-ink">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto perbesar" class="fixed inset-0 z-50">
+  <div id="lightbox-backdrop" class="absolute inset-0 bg-black/95"></div>
+
+  <div class="relative h-full flex flex-col">
+    <div class="flex items-center justify-between px-5 sm:px-8 py-5 text-white text-sm">
+      <span id="lightbox-counter">01 / 25</span>
+      <button id="lightbox-close" aria-label="Tutup tampilan foto" class="text-2xl leading-none px-2">&times;</button>
+    </div>
+
+    <div class="flex-1 flex items-center justify-center px-4 sm:px-16 relative min-h-0">
+      <button id="lightbox-prev" aria-label="Foto sebelumnya" class="absolute left-1 sm:left-4 text-white text-3xl px-3 py-6">&#8249;</button>
+      <img id="lightbox-img" src="" alt="" class="max-h-[70vh] sm:max-h-[75vh] max-w-full object-contain" />
+      <button id="lightbox-next" aria-label="Foto berikutnya" class="absolute right-1 sm:right-4 text-white text-3xl px-3 py-6">&#8250;</button>
+    </div>
+
+    <p id="lightbox-caption" class="text-center text-white/80 text-sm py-6 px-6"></p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

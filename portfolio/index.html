@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>I Made Arya Dipa — Fotografi &amp; Rekayasa Perangkat Lunak</title>
+<meta name="description" content="Portofolio pribadi I Made Arya Dipa: fotografi dan proyek pengembangan perangkat lunak." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#000000', paper: '#ffffff', line: '#e2e2e2', mute: '#6b6b6b' },
+        fontFamily: {
+          serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="font-serif text-lg tracking-tight">I Made Arya Dipa</a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a data-nav-link href="index.html" class="link-reveal opacity-100">Beranda</a>
+      <a data-nav-link href="gallery.html" class="link-reveal opacity-60">Galeri</a>
+      <a data-nav-link href="projects.html" class="link-reveal opacity-60">Proyek</a>
+      <a data-nav-link href="about.html" class="link-reveal opacity-60">Tentang</a>
+    </nav>
+
+    <button id="nav-toggle" aria-expanded="false" aria-label="Buka menu navigasi" class="md:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-[6px]">
+      <span class="hamburger-line hamburger-line-1 block w-6 h-px bg-ink"></span>
+      <span class="hamburger-line hamburger-line-2 block w-6 h-px bg-ink"></span>
+      <span class="hamburger-line hamburger-line-3 block w-6 h-px bg-ink"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV OVERLAY ============ -->
+<div id="nav-overlay" class="md:hidden fixed inset-0 z-30 bg-black text-white flex flex-col justify-center px-8">
+  <nav class="flex flex-col gap-6 font-serif text-4xl">
+    <a href="index.html">Beranda</a>
+    <a href="gallery.html">Galeri</a>
+    <a href="projects.html">Proyek</a>
+    <a href="about.html">Tentang</a>
+  </nav>
+</div>
+
+<main class="pt-16">
+
+  <!-- ============ HERO ============ -->
+  <section class="max-w-6xl mx-auto px-6 sm:px-8 pt-20 pb-16 sm:pt-28 sm:pb-24">
+    <p class="hero-rise hero-rise-1 text-sm text-mute mb-6">Fotografer &amp; Pengembang Perangkat Lunak, berbasis di Bali</p>
+    <h1 class="hero-rise hero-rise-2 font-serif font-normal leading-[0.98] tracking-tight text-[14vw] sm:text-[9vw] lg:text-[5.5rem] max-w-5xl">
+      Memotret momen,<br />merangkai kode.
+    </h1>
+    <p class="hero-rise hero-rise-3 mt-8 max-w-xl text-mute leading-relaxed">
+      Saya membagi waktu antara mengamati cahaya lewat lensa dan menyusun logika lewat baris kode.
+      Halaman ini adalah kumpulan hasil jepretan dan proyek yang pernah saya bangun.
+    </p>
+    <div class="hero-rise hero-rise-4 mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+      <a href="gallery.html" class="link-reveal">Lihat galeri foto</a>
+      <a href="projects.html" class="link-reveal">Lihat proyek kode</a>
+      <a href="about.html" class="link-reveal">Tentang saya</a>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PHOTO STRIP ============ -->
+  <section class="max-w-6xl mx-auto px-6 sm:px-8 pb-20 sm:pb-28">
+    <div class="flex items-baseline justify-between mb-6 border-b border-line pb-4">
+      <h2 class="font-serif text-2xl">Jepretan pilihan</h2>
+      <a href="gallery.html" class="link-reveal text-sm text-mute hidden sm:inline">Semua foto</a>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+      <a href="gallery.html" class="frame overflow-hidden bg-line row-span-2 aspect-[3/4]">
+        <img src="images/IMG-20251029-WA0059.jpg" alt="Busana adat di antara ukiran batu" class="w-full h-full object-cover" loading="lazy" />
+      </a>
+      <a href="gallery.html" class="frame overflow-hidden bg-line aspect-square">
+        <img src="images/2018_06_28_18_49_IMG_9876.JPG" alt="Perbukitan dan pemukiman" class="w-full h-full object-cover" loading="lazy" />
+      </a>
+      <a href="gallery.html" class="frame overflow-hidden bg-line aspect-square">
+        <img src="images/2018_06_13_19_11_IMG_8860.JPG" alt="Payung warna-warni saat hujan" class="w-full h-full object-cover" loading="lazy" />
+      </a>
+      <a href="gallery.html" class="frame overflow-hidden bg-line aspect-[3/4] col-span-1">
+        <img src="images/IMG-20251029-WA0070.jpg" alt="Gaun putih di tepi karang" class="w-full h-full object-cover" loading="lazy" />
+      </a>
+      <a href="gallery.html" class="frame overflow-hidden bg-line aspect-[3/4] sm:hidden xs:hidden">
+        <img src="images/IMG-20251029-WA0048.jpg" alt="Busana upacara adat" class="w-full h-full object-cover" loading="lazy" />
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PROJECTS INDEX ============ -->
+  <section class="max-w-6xl mx-auto px-6 sm:px-8 pb-24 sm:pb-32">
+    <div class="flex items-baseline justify-between mb-6 border-b border-line pb-4">
+      <h2 class="font-serif text-2xl">Proyek pilihan</h2>
+      <a href="projects.html" class="link-reveal text-sm text-mute hidden sm:inline">Semua proyek</a>
+    </div>
+
+    <ul class="divide-y divide-line">
+      <li>
+        <a href="projects.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-8 py-6">
+          <span class="text-mute text-sm w-10 shrink-0">01</span>
+          <span class="font-serif text-xl sm:text-2xl group-hover:italic transition-[font-style]">Rutewaktu — Pelacak jadwal kereta lokal</span>
+          <span class="sm:ml-auto text-sm text-mute shrink-0">React · Node.js · PostgreSQL</span>
+        </a>
+      </li>
+      <li>
+        <a href="projects.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-8 py-6">
+          <span class="text-mute text-sm w-10 shrink-0">02</span>
+          <span class="font-serif text-xl sm:text-2xl group-hover:italic transition-[font-style]">Kertas — Editor tulisan minimalis</span>
+          <span class="sm:ml-auto text-sm text-mute shrink-0">JavaScript · IndexedDB</span>
+        </a>
+      </li>
+      <li>
+        <a href="projects.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-8 py-6">
+          <span class="text-mute text-sm w-10 shrink-0">03</span>
+          <span class="font-serif text-xl sm:text-2xl group-hover:italic transition-[font-style]">Studio Cahaya — Situs galeri klien fotografi</span>
+          <span class="sm:ml-auto text-sm text-mute shrink-0">Tailwind CSS · Vercel</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-line">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 py-10 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-sm text-mute">
+    <p>© 2026 I Made Arya Dipa. Dibuat dengan Tailwind CSS.</p>
+    <div class="flex gap-6">
+      <a href="mailto:halo@imadearyadipa.dev" class="link-reveal text-ink">Email</a>
+      <a href="https://github.com/" class="link-reveal text-ink">GitHub</a>
+      <a href="https://instagram.com/" class="link-reveal text-ink">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

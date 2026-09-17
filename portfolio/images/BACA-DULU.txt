@@ -1,0 +1,47 @@
+FOTO INI PERLU DISALIN MANUAL OLEH ANDA
+=========================================
+Kode di index.html dan gallery.html sudah saya arahkan ke nama-nama file berikut
+(persis sesuai nama file asli Anda, termasuk huruf besar/kecilnya). Tinggal salin
+file-file ini dari galeri foto Anda ke folder "images/" ini dengan NAMA YANG SAMA
+PERSIS -- jangan diganti nama, jangan diubah ekstensinya (.JPG tetap .JPG, .jpg
+tetap .jpg) -- lalu hapus file .txt ini.
+
+Dipakai di index.html (beranda):
+- IMG-20251029-WA0059.jpg
+- 2018_06_28_18_49_IMG_9876.JPG
+- 2018_06_13_19_11_IMG_8860.JPG
+- IMG-20251029-WA0070.jpg
+- IMG-20251029-WA0048.jpg
+
+Dipakai di gallery.html (galeri, 25 foto):
+- IMG-20251029-WA0059.jpg
+- IMG-20251029-WA0063.jpg
+- IMG-20251029-WA0070.jpg
+- IMG-20251029-WA0081.jpg
+- IMG-20251029-WA0082.jpg
+- 2018_06_13_19_11_IMG_8860.JPG
+- 2018_06_13_19_11_IMG_8861.JPG
+- 2018_06_13_19_12_IMG_8862.JPG
+- 2018_06_13_19_32_IMG_8863.JPG
+- 2018_06_13_19_36_IMG_8865.JPG
+- 2018_06_13_19_37_IMG_8866.JPG
+- 2018_06_13_19_38_IMG_8867.JPG
+- 2018_06_13_19_37_IMG_8868.JPG
+- 2018_06_28_18_49_IMG_9876.JPG
+- 2018_06_28_19_16_IMG_9875.JPG
+- 2018_06_28_19_17_IMG_9867.JPG
+- 2018_06_28_19_20_IMG_9874.JPG
+- 1000140230.jpg
+- 1000140266.jpg
+- IMG-20251029-WA0048.jpg
+- IMG-20251029-WA0049.jpg
+- IMG-20251029-WA0051.jpg
+- IMG-20251029-WA0060.jpg
+- IMG-20251029-WA0061.jpg
+- IMG-20251029-WA0062.jpg
+
+Dipakai di about.html (foto profil):
+- SVF08769.jpg
+
+Kalau nama file kamera Anda beda (misalnya ekstensinya sedikit lain), sesuaikan
+juga src="images/..." di file HTML terkait supaya cocok persis.
