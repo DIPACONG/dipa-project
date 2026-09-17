@@ -1,0 +1,126 @@
+:root {
+  --bg: #f2f3f7;
+  --card-bg: #ffffff;
+  --display-bg: #1c1c2b;
+  --display-text: #ffffff;
+  --btn-bg: #eceef4;
+  --btn-text: #1c1c2b;
+  --btn-hover: #dfe2ec;
+  --op-bg: #6c63ff;
+  --op-text: #ffffff;
+  --op-hover: #5a52e0;
+  --equals-bg: #2ecc71;
+  --equals-hover: #27ae60;
+  --clear-bg: #ff6b6b;
+  --clear-hover: #ee5253;
+  --shadow: rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 340px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.display {
+  background: var(--display-bg);
+  color: var(--display-text);
+  border-radius: 14px;
+  padding: 22px 16px;
+  text-align: right;
+  margin-bottom: 16px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.display .prev {
+  font-size: 14px;
+  opacity: 0.6;
+  min-height: 18px;
+  word-break: break-all;
+}
+
+.display .current {
+  font-size: 32px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 18px 0;
+  font-size: 18px;
+  font-weight: 600;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+button:hover {
+  background: var(--btn-hover);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button.operator {
+  background: var(--op-bg);
+  color: var(--op-text);
+}
+
+button.operator:hover {
+  background: var(--op-hover);
+}
+
+button.equals {
+  background: var(--equals-bg);
+  color: #fff;
+  grid-column: span 2;
+}
+
+button.equals:hover {
+  background: var(--equals-hover);
+}
+
+button.clear {
+  background: var(--clear-bg);
+  color: #fff;
+}
+
+button.clear:hover {
+  background: var(--clear-hover);
+}
+
+button.zero {
+  grid-column: span 2;
+}
